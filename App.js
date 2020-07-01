@@ -1,30 +1,33 @@
-import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, StyleSheet, FlatList} from 'react-native';
+import Header from './components/Header';
+import 'react-native-get-random-values';
+import {uuid} from 'uuidv4';
 
 const App = () => {
+  const [items, setItems] = useState([
+    {id: uuid(), text: 'Milk'},
+    {id: uuid(), text: 'Cream'},
+    {id: uuid(), text: 'Coffee'},
+    {id: uuid(), text: 'Eggs'},
+    {id: uuid(), text: 'Bread'},
+    {id: uuid(), text: 'Bread'},
+    {id: uuid(), text: 'Bread'},
+    {id: uuid(), text: 'Bread'},
+  ]);
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello World</Text>
-      <Image
-        source={{uri: 'https://randomuser.me/api/portraits/men/1.jpg'}}
-        style={styles.img}
-      />
+      <Header title="Shopping List Demo" />
+      <FlatList />
     </View>
   );
 };
 
-export default App;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {color: 'darkslateblue', fontSize: 30},
-  img: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    backgroundColor: 'orange',
   },
 });
+
+export default App;
