@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import Header from './components/Header';
 import 'react-native-get-random-values';
-import {uuid} from 'uuidv4';
+import uuid from './helpers/uuid';
 
 const App = () => {
   const [items, setItems] = useState([
