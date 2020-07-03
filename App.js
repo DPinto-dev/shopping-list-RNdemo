@@ -11,9 +11,6 @@ const App = () => {
     {id: uuid(), text: 'Coffee'},
     {id: uuid(), text: 'Eggs'},
     {id: uuid(), text: 'Bread'},
-    {id: uuid(), text: 'Bread'},
-    {id: uuid(), text: 'Bread'},
-    {id: uuid(), text: 'Bread'},
   ]);
   return (
     <View style={styles.container}>
